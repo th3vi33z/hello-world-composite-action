@@ -1,1 +1,1 @@
-GoodBye
+echo "GoodBye"
