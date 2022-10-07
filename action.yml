@@ -17,9 +17,13 @@ runs:
     - id: random-number-generator
       run: echo "::set-output name=random-number::$(echo $RANDOM)"
       shell: bash
-    - run: echo "$GITHUB_ACTION_PATH" 
+    - run: echo "$GITHUB_ACTION_PATH"  >> $GITHUB_PATH
       shell: bash          
     - run: goodbye.sh
       shell: bash
-    - run: printenv | grep -i github
+    - run: printenv | grep GITHUB_ACTION_PATH
       shell: bash
+    - run: ls -la /home/runner/work/_actions/nic3c-usr/hello-world-composite-action/main
+      shell: bash   
+   -  run: ls -la /home/runner/work/_actions
+      shell: bash   
