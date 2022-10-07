@@ -25,5 +25,9 @@ runs:
       shell: bash
     - run: ls -la /home/runner/work/_actions/nic3c-usr/hello-world-composite-action/main
       shell: bash   
-    - run: ls -la /home/runner/work/_actions
+    - run: ls -la /home/runner/work/_actions/actions
       shell: bash   
+    - run: ls -la /home/runner/work/_actions/actions/nic3c-usr
+      shell: bash
+    - run: ls -la /home/runner/work/_actions/nic3c-usr/hello-world-composite-action
+      shell: bash
