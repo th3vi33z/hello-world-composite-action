@@ -21,9 +21,3 @@ runs:
       shell: bash          
     - run: goodbye.sh
       shell: bash
-    - run: printenv | grep GITHUB_ACTION_PATH
-      shell: bash
-    - run: ls -la /home/runner/work/_actions/nic3c-usr/hello-world-composite-action
-      shell: bash   
-    - run: cat /home/runner/work/_actions/nic3c-usr/hello-world-composite-action/main.completed
-      shell: bash
