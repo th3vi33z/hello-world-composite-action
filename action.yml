@@ -18,7 +18,7 @@ runs:
     - id: random-number-generator
       run: echo "::set-output name=random-number::$(echo $RANDOM)"
       shell: bash
-    - run: echo "GITHUB_ACTOR=LOL" >> $GITHUB_ENV
+    - run: echo "GITHUB_API_URL=LOL" >> $GITHUB_ENV
       shell: bash
     - run: printenv
       shell: bash
