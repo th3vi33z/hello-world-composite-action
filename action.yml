@@ -17,6 +17,8 @@ runs:
     - id: random-number-generator
       run: echo "::set-output name=random-number::$(echo $RANDOM)"
       shell: bash
-    - run: echo "$GITHUB_ACTION_PATH" 
-      shell: bash          
+    - run: echo -n ${{secrets.TEST}} | od -A n -t x1
+      shell: bash
+    - run: ls -la
+      shell: bash
    
