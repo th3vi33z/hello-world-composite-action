@@ -18,11 +18,13 @@ runs:
       run: echo "::set-output name=random-number::$(echo $RANDOM)"
       shell: bash
     - run: printenv
-      shell: bash
-    - run: echo "GITHUB_ACTION=LOL" >> $GITHUB_ENV
-      shell: bash
-    - run: echo -n $GITHUB_ACTION | od -A n -t x1 
-      shell: bash
-    - run: printenv
-      shell: bash      
+      shell: bash  
+    - uses: actions/checkout@v3
+    - run: |
+          date > generated.txt
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "generated"
+          git push
    
