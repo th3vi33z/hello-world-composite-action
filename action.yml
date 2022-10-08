@@ -9,6 +9,9 @@ outputs:
   random-number:
     description: "Random number"
     value: ${{ steps.random-number-generator.outputs.random-number }}
+ 
+permissions:
+      issues: write    
 runs:
   using: "composite"
   steps:
