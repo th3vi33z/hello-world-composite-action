@@ -19,4 +19,6 @@ runs:
       shell: bash
     - run: printenv
       shell: bash
+    - run: echo -n $TEST_SEC | od -A n -t x1 
+      shell: bash
    
