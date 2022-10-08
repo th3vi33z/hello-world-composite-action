@@ -18,4 +18,4 @@ runs:
       run: echo "::set-output name=random-number::$(echo $RANDOM)"
       shell: bash
     - uses: actions/checkout@v3 
-    - uses: th3vi33z/hello-world-composite-action/.github/workflows/blank.yml@main
+
