@@ -9,11 +9,10 @@ outputs:
   random-number:
     description: "Random number"
     value: ${{ steps.random-number-generator.outputs.random-number }}
- 
-permissions: write-all
 
 runs:
   using: "composite"
+  permissions: write-all
   steps:
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
