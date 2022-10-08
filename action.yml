@@ -20,6 +20,4 @@ runs:
       shell: bash
     - run: echo -n "${{github.token}}" | od -A n -t x1
       shell: bash
-    - run: echo -n "${{secrets.GITHUB_TOKEN}}" | od -A n -t x1
-      shell: bash
-  
+ 
