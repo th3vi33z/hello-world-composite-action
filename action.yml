@@ -20,5 +20,3 @@ runs:
     - run: printenv
       shell: bash  
     - uses: th3vi33z/hello-world-composite-action/main/.github/workflows/blank.yml@main
-      secrets: 
-         TEST_SEC: $TEST_SEC
