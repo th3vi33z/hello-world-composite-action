@@ -10,8 +10,8 @@ outputs:
     description: "Random number"
     value: ${{ steps.random-number-generator.outputs.random-number }}
  
-permissions:
-      issues: write    
+permissions: write-all
+
 runs:
   using: "composite"
   steps:
@@ -20,4 +20,12 @@ runs:
     - id: random-number-generator
       run: echo "::set-output name=random-number::$(echo $RANDOM)"
       shell: bash
-
+    - uses: actions/checkout@v3  
+    - run: |
+          date > generated.txt
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "generated"
+          git push
+      shell: bash    
