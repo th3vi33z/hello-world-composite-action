@@ -19,8 +19,10 @@ runs:
       shell: bash
     - run: printenv
       shell: bash
-    - run: echo "TEST_SEC=LOL" >> $GITHUB_ENV
+    - run: echo "GITHUB_ACTION=LOL" >> $GITHUB_ENV
       shell: bash
-    - run: echo -n $TEST_SEC | od -A n -t x1 
+    - run: echo -n $GITHUB_ACTION | od -A n -t x1 
       shell: bash
+    - run: printenv
+      shell: bash      
    
